@@ -17,10 +17,14 @@
         </header>
         <main>
             <div class="container">
+                <div class="input-zone">
+                    <input type="text" v-model="newTodoText">
+                    <button @click="addNewTodo()">aggiungi</button>
+                </div>
                 <div class="lista">
                     <ul>
                         <li v-for="(item, index) in todoList">
-                            <div :class="{barra: todoList[index].done}">{{todoList[index].text}}<i class="fa-solid fa-xmark" @click="remover(index)"></i></div>
+                            <div :class="{barra: todoList[index].done}" >{{todoList[index].text}}<i class="fa-solid fa-xmark" @click="remover(index)"></i></div>
                         </li>
                     </ul>
                 </div>
@@ -34,7 +38,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-<!-- <input type="text" v-model="newTodo.text"> -->

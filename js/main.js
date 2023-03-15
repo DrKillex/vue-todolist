@@ -15,16 +15,25 @@ createApp({
                     done: true
                 }
             ],
-            newTodo: {
-                text: '',
-                done: false
-            },
+            newTodoText: '',
         }
     },
     methods: {
         remover(index){
             this.todoList.splice(this.todoList[index],1)
             console.log(index)
+        },
+        addNewTodo(){
+            if(this.newTodoText.trim() !== ''){
+                this.todoList.push({text: this.newTodoText, done: false})
+                this.newTodoText = ''
+            } else {
+                this.todoList.push({text: 'forse se scrivi qualcosa magari ti è meglio eh...che dici?', done: false})
+                this.newTodoText = ''
+            }
+        },
+        doneCheck(){
+            
         }
     }
 }).mount('#app')
