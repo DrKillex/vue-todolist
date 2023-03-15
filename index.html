@@ -11,9 +11,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="app" v-cloak>
+        <header>
+            <h1>TO DO LIST</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="lista">
+                    <ul>
+                        <li v-for="(item, index) in todoList">
+                            <div :class="{barra: todoList[index].done}">{{todoList[index].text}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    
     <!-- vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- myJS -->
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+<!-- <input type="text" v-model="newTodo.text"> -->
