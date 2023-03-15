@@ -18,7 +18,7 @@
         <main>
             <div class="container">
                 <div class="input-zone">
-                    <input type="text" v-model="newTodoText">
+                    <input type="text" v-model="newTodoText" @keyup.enter="addNewTodo()">
                     <button @click="addNewTodo()">aggiungi</button>
                 </div>
                 <div class="lista">
