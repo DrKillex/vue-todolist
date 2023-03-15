@@ -20,5 +20,11 @@ createApp({
                 done: false
             },
         }
+    },
+    methods: {
+        remover(index){
+            this.todoList.splice(this.todoList[index],1)
+            console.log(index)
+        }
     }
 }).mount('#app')
