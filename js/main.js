@@ -19,10 +19,12 @@ createApp({
         }
     },
     methods: {
+        //rimuove l elemento selezionato dalla lista
         remover(index){
             this.todoList.splice(this.todoList[index],1)
             console.log(index)
         },
+        // aggiunge nuovo elemento alla lista
         addNewTodo(){
             if(this.newTodoText.trim() !== ''){
                 this.todoList.push({text: this.newTodoText, done: false})
@@ -32,6 +34,7 @@ createApp({
                 this.newTodoText = ''
             }
         },
+        //inverte done true con false e viceversa
         doneCheck(index){
             if (this.todoList[index].done === true){
                 this.todoList[index].done = false
