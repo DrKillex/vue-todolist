@@ -30,7 +30,7 @@ createApp({
                 this.todoList.push({text: this.newTodoText, done: false})
                 this.newTodoText = ''
             } else {
-                this.todoList.push({text: 'forse se scrivi qualcosa magari ti è meglio eh...che dici?', done: false})
+                this.todoList.push({text: 'forse se scrivi qualcosa magari è meglio eh...che dici?', done: false})
                 this.newTodoText = ''
             }
         },
