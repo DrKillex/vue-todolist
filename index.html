@@ -24,7 +24,7 @@
                 <div class="lista">
                     <ul>
                         <li v-for="(item, index) in todoList">
-                            <div :class="{barra: todoList[index].done}" >{{todoList[index].text}}<i class="fa-solid fa-xmark" @click="remover(index)"></i></div>
+                            <div :class="{barra: todoList[index].done}"><span @click="doneCheck(index)">{{todoList[index].text}}</span><i class="fa-solid fa-xmark" @click="remover(index)"></i></div>
                         </li>
                     </ul>
                 </div>
