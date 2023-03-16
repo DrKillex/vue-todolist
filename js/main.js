@@ -36,11 +36,7 @@ createApp({
         },
         //inverte done true con false e viceversa
         doneCheck(index){
-            if (this.todoList[index].done === true){
-                this.todoList[index].done = false
-            } else if(this.todoList[index].done === false) {
-                this.todoList[index].done = true
-            }
+            this.todoList[index].done = !this.todoList[index].done
         }
     }
 }).mount('#app')
