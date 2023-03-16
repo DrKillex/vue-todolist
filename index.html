@@ -31,7 +31,7 @@
                 <div class="lista">
                     <ul v-if="todoList.length > 0">
                         <li v-for="(item, index) in todoList">
-                            <div id="list-item-content"><span @click="doneCheck(index)" :class="{barra: todoList[index].done}">{{todoList[index].text}}</span><i class="fa-solid fa-xmark" @click="remover(index)"></i></div>
+                            <div id="list-item-content"><span @click="doneCheck(index)" :class="{barra: item.done}">{{item.text}}</span><i class="fa-solid fa-xmark" @click="remover(index)"></i></div>
                         </li>
                     </ul>
                     <div id="sostituto-lista" v-else>nessun elemento in lista</div>
